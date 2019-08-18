@@ -1,8 +1,8 @@
 FROM golang:1.12.7
 
-RUN curl -fsSL https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-cpu-linux-x86_64-1.14.0.tar.gz -o libtensorflow.tar.gz && \
-    tar -C /usr/local -xzf libtensorflow.tar.gz && /
-    rm -Rf libtensorflow.tar.gz
+RUN curl -fsSL https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-cpu-linux-x86_64-1.14.0.tar.gz -o libtensorflow.tar.gz
+RUN tar -C /usr/local -xzf libtensorflow.tar.gz
+RUN rm -Rf libtensorflow.tar.gz
 
 RUN ldconfig
 
